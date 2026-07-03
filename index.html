@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Enabled MDMP Staff Toolkit — 3MBDE Playbook</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23d9a92c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='14' font-weight='800' text-anchor='middle' fill='%2317140a'%3E3B%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="banner" id="topBanner">FOR TRAINING USE — DERIVED FROM: EVOLVING BRIGADE MDMP WITH AI-ENABLED PLANNING v2.0 (6 JUN 2026)</div>
+
+<header class="topbar">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+  <div class="brand">
+    <span class="brand-badge">3MBDE</span>
+    <div class="brand-text">
+      <h1>AI-Enabled MDMP Staff Toolkit</h1>
+      <p>Artificial staff. Human command.</p>
+    </div>
+  </div>
+  <div class="clock" id="dtgClock" title="Current date-time group (Zulu)"></div>
+</header>
+
+<div class="layout">
+  <nav class="sidebar" id="sidebar">
+    <button class="nav-item active" data-view="overview">01 · Overview</button>
+    <button class="nav-item" data-view="workflow">02 · MDMP Workflow</button>
+    <button class="nav-item" data-view="prompts">03 · Prompt Library</button>
+    <button class="nav-item" data-view="builder">04 · Prompt Builder</button>
+    <button class="nav-item" data-view="timeline">05 · Timeline Calculator</button>
+    <button class="nav-item" data-view="governance">06 · Governance &amp; Validation</button>
+    <button class="nav-item" data-view="cpops">07 · Command Post Ops</button>
+    <button class="nav-item" data-view="playbook">08 · Challenges &amp; Playbook</button>
+    <button class="nav-item" data-view="metrics">09 · Metrics Tracker</button>
+  </nav>
+
+  <main class="content">
+    <section id="view-overview" class="view active"></section>
+    <section id="view-workflow" class="view"></section>
+    <section id="view-prompts" class="view"></section>
+    <section id="view-builder" class="view"></section>
+    <section id="view-timeline" class="view"></section>
+    <section id="view-governance" class="view"></section>
+    <section id="view-cpops" class="view"></section>
+    <section id="view-playbook" class="view"></section>
+    <section id="view-metrics" class="view"></section>
+  </main>
+</div>
+
+<footer class="footer">
+  Built from “Evolving Brigade MDMP with AI-Orchestrated Planning,” 3D Mobile Brigade, 101st Airborne Division (AASLT), 6 June 2026.
+  AI organizes · the battle captain decides · the commander commands.
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
