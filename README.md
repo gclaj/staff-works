@@ -17,9 +17,16 @@ The document's own conclusion is the app's premise: *AI-enabled MDMP is no longe
 | **07 Command Post Ops** | The five CP use cases, context-load checklist, auto-flag URGENT rules, the AI will-not-infer list, and the AI battle-rhythm schedule |
 | **08 Challenges & Playbook** | All seven challenges with fielded solutions, ten best practices, right-vs-wrong comparison, and the eleven "What Not to Do" prohibitions |
 | **09 Metrics Tracker** | Log exercises and track the paper's recommended metrics (time to WARNO #1, doctrinal errors, staff-ready %, planning-cycle hours, staff confidence) with event-over-event deltas |
-| **10 Workflow Engine** | Multi-agent orchestration of the paper's bot roster: the AI Integrator, functional specialist bots (S2/S3/S4/FSO/ENG), Red Team agent, and XO Coach run MDMP as a pipeline — higher-order extraction → WARNO #1 + timeline → parallel running estimates → Red Team proof → **hard human gate at COA development** → XO Coach wargame questions + Red Team gap analysis → OPORD shell → final consistency check → named-validator sign-offs → export the planning packet as markdown |
+| **10 Workflow Engine** | Multi-agent orchestration of the paper's bot roster with the **S3 Bot as primary orchestrator**: load a Knowledge Bank (higher OPORDs, WARNORDs, annexes/appendices) and the CDR's Intent Worksheet, then run the full MDMP batch — the pipeline pauses for human interaction at the COA gate and at validation sign-off |
 
 ## The Workflow Engine
+
+**Inputs (both required before the batch runs):**
+
+1. **Knowledge Bank** — add any number of named documents (HHQ OPORD, HHQ WARNORD, ANNEX/APPENDIX, FRAGO, SOP/TEMPLATE) by pasting text or uploading `.txt`/`.md` files. The bots cite these documents and never fabricate what they don't contain.
+2. **CDR's Intent Worksheet** — expanded purpose, key tasks, end state, and optional risk guidance. Human-authored and non-delegable: the engine incorporates it *verbatim* into WARNO #1 and the OPORD (labeled "CDR-provided, verbatim") — preserving and formalizing command thought, never writing it.
+
+**Orchestration:** the **S3 Bot is the primary orchestrating agent** (the paper places the AI Integrator role in the S3 cell). It extracts and reconciles the knowledge bank, drafts WARNO #1 and the 1/3–2/3 timeline, tasks the functional specialists (S2/S4/FSO/ENG estimates run in parallel), sequences the Red Team and XO Coach, and assembles the OPORD shell. A status banner tracks the pipeline: NOT READY (lists missing inputs) → READY → RUNNING → **PAUSED — HUMAN INTERACTION REQUIRED** (COA gate) → BATCH COMPLETE — HUMAN VALIDATION REQUIRED.
 
 The engine has two modes, mirroring the paper's Challenge 6 (DDIL) guidance:
 

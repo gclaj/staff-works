@@ -488,6 +488,19 @@ td.mono, .mono { font-family: var(--mono); }
 .agent-out { padding: 0 16px 14px; }
 .agent-out .prompt-text { max-height: 320px; overflow-y: auto; }
 
+.kb-add {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+@media (max-width: 700px) { .kb-add { grid-template-columns: 1fr; } }
+.kb-list { margin-bottom: 8px; }
+
 /* ---- Footer & toast ---- */
 .footer {
   border-top: 1px solid var(--line);
