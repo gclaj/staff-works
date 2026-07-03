@@ -17,6 +17,16 @@ The document's own conclusion is the app's premise: *AI-enabled MDMP is no longe
 | **07 Command Post Ops** | The five CP use cases, context-load checklist, auto-flag URGENT rules, the AI will-not-infer list, and the AI battle-rhythm schedule |
 | **08 Challenges & Playbook** | All seven challenges with fielded solutions, ten best practices, right-vs-wrong comparison, and the eleven "What Not to Do" prohibitions |
 | **09 Metrics Tracker** | Log exercises and track the paper's recommended metrics (time to WARNO #1, doctrinal errors, staff-ready %, planning-cycle hours, staff confidence) with event-over-event deltas |
+| **10 Workflow Engine** | Multi-agent orchestration of the paper's bot roster: the AI Integrator, functional specialist bots (S2/S3/S4/FSO/ENG), Red Team agent, and XO Coach run MDMP as a pipeline — higher-order extraction → WARNO #1 + timeline → parallel running estimates → Red Team proof → **hard human gate at COA development** → XO Coach wargame questions + Red Team gap analysis → OPORD shell → final consistency check → named-validator sign-offs → export the planning packet as markdown |
+
+## The Workflow Engine
+
+The engine has two modes, mirroring the paper's Challenge 6 (DDIL) guidance:
+
+- **Simulation (default)** — fully offline. Each bot produces a doctrinally structured skeleton product built from your inputs, with `[TBD]` placeholders and paired RFIs everywhere data wasn't supplied (zero fabrication tolerance).
+- **Live** — calls Claude directly from the browser via the Anthropic Messages API using your own API key (stored only in browser localStorage). Every bot runs under a shared governance system prompt encoding the paper's Five Principles; model selection follows the paper's guidance (Opus-class for complex doctrinal reasoning, lighter models for routine work). **Do not paste classified or CUI material into live mode** — the paper's commercial-API dependency warning applies.
+
+Governance is enforced in code, not just prose: the pipeline **stops** at COA development and will not continue until a human types the commander-selected COA; AI never authors commander's intent (the OPORD shell marks it `[CDR PROVIDES — NON-DELEGABLE]`); every product is stamped DRAFT until its named validator signs it in Phase 6; unsigned products export stamped `DRAFT — UNVALIDATED`.
 
 ## Running it
 
