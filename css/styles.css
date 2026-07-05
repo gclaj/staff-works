@@ -501,6 +501,35 @@ td.mono, .mono { font-family: var(--mono); }
 @media (max-width: 700px) { .kb-add { grid-template-columns: 1fr; } }
 .kb-list { margin-bottom: 8px; }
 
+.roster { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-bottom: 8px; }
+.roster-node {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.roster-node.gov { border-color: var(--gold-dim); }
+.roster-role { font-size: 0.74rem; color: var(--muted); }
+
+.revise-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
+.revise-box { display: flex; gap: 8px; align-items: flex-start; }
+.revise-box textarea {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  padding: 8px 10px;
+  resize: vertical;
+}
+.revise-box textarea:focus { outline: none; border-color: var(--gold-dim); }
+@media (max-width: 700px) { .revise-box { flex-direction: column; } .revise-box textarea { width: 100%; } }
+
 /* ---- Footer & toast ---- */
 .footer {
   border-top: 1px solid var(--line);

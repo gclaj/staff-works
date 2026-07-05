@@ -17,16 +17,20 @@ The document's own conclusion is the app's premise: *AI-enabled MDMP is no longe
 | **07 Command Post Ops** | The five CP use cases, context-load checklist, auto-flag URGENT rules, the AI will-not-infer list, and the AI battle-rhythm schedule |
 | **08 Challenges & Playbook** | All seven challenges with fielded solutions, ten best practices, right-vs-wrong comparison, and the eleven "What Not to Do" prohibitions |
 | **09 Metrics Tracker** | Log exercises and track the paper's recommended metrics (time to WARNO #1, doctrinal errors, staff-ready %, planning-cycle hours, staff confidence) with event-over-event deltas |
-| **10 Workflow Engine** | Multi-agent orchestration of the paper's bot roster with the **S3 Bot as primary orchestrator**: load a Knowledge Bank (higher OPORDs, WARNORDs, annexes/appendices) and the CDR's Intent Worksheet, then run the full MDMP batch — the pipeline pauses for human interaction at the COA gate and at validation sign-off |
+| **10 Workflow Engine** | The staff officer as **Chief of Staff of an AI staff**: eight agents mapped 1:1 to staff nodes (S1, S2, S3, S4, FIRES, S6, S8, MEDICAL) conduct MDMP under S3 Bot orchestration, pausing at the end of every step for the user's review, revision direction, and approval |
 
-## The Workflow Engine
+## The Workflow Engine — you are the Chief of Staff
+
+**The staff:** eight AI agents mapped directly to staff nodes — **S1** (personnel), **S2** (intelligence), **S3** (operations — the primary orchestrating agent, since the paper places the AI Integrator role in the S3 cell), **S4** (sustainment), **FIRES** (FSO cell), **S6** (signal), **S8** (resource management), **MEDICAL** (surgeon cell) — plus the **Red Team agent** and **XO Coach** as governance validators. Each has a role-specific persona layered on a shared governance system prompt encoding the paper's Five Principles.
 
 **Inputs (both required before the batch runs):**
 
-1. **Knowledge Bank** — add any number of named documents (HHQ OPORD, HHQ WARNORD, ANNEX/APPENDIX, FRAGO, SOP/TEMPLATE) by pasting text or uploading `.txt`/`.md` files. The bots cite these documents and never fabricate what they don't contain.
-2. **CDR's Intent Worksheet** — expanded purpose, key tasks, end state, and optional risk guidance. Human-authored and non-delegable: the engine incorporates it *verbatim* into WARNO #1 and the OPORD (labeled "CDR-provided, verbatim") — preserving and formalizing command thought, never writing it.
+1. **Knowledge Bank** — add any number of named documents (HHQ OPORD, HHQ WARNORD, ANNEX/APPENDIX, FRAGO, SOP/TEMPLATE) by pasting text or uploading `.txt`/`.md` files. The agents cite these documents and never fabricate what they don't contain.
+2. **CDR's Intent Worksheet** — expanded purpose, key tasks, end state, optional risk guidance. Human-authored and non-delegable: the engine incorporates it *verbatim* into WARNO #1 and the OPORD.
 
-**Orchestration:** the **S3 Bot is the primary orchestrating agent** (the paper places the AI Integrator role in the S3 cell). It extracts and reconciles the knowledge bank, drafts WARNO #1 and the 1/3–2/3 timeline, tasks the functional specialists (S2/S4/FSO/ENG estimates run in parallel), sequences the Red Team and XO Coach, and assembles the OPORD shell. A status banner tracks the pipeline: NOT READY (lists missing inputs) → READY → RUNNING → **PAUSED — HUMAN INTERACTION REQUIRED** (COA gate) → BATCH COMPLETE — HUMAN VALIDATION REQUIRED.
+**The user is the orchestrator.** The pipeline pauses at a **COS review gate at the end of every MDMP step**: Receipt of Mission (extraction, WARNO #1, timeline) → *review* → Mission Analysis (all eight staff estimates in parallel + Red Team proof) → *review* → COA Development (**human-only** — the agents are locked out until the user enters the commander-selected COA) → Wargame (XO Coach questions across all eight nodes + Red Team gap analysis) → *review* → Orders Production (OPORD paragraphs 1–5: para 4 synthesizes S4/S1/MEDICAL/S8, para 5 synthesizes S6; final Red Team consistency check) → validation sign-off by named validator → export.
+
+**Iteration is the designed workflow:** every product card carries a feedback box — the COS sends a draft back to its agent with direction, the agent revises (preserving unaffected content), and the card shows a REV badge. Revisions clear that product's validation signature.
 
 The engine has two modes, mirroring the paper's Challenge 6 (DDIL) guidance:
 
